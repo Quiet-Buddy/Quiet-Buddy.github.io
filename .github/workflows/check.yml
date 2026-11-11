@@ -1,0 +1,20 @@
+name: Check site
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          # --offline: check internal links only, no network requests
+          args: --no-progress --offline --root-dir ${{ github.workspace }} './**/*.html'
+          fail: true

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiet Buddy</title>
+  <meta name="description" content="Quiet Buddy is a free Android noise meter for the family. Choose your language: English, Español or Euskara.">
+  <link rel="alternate" hreflang="en" href="https://quiet-buddy.github.io/en/">
+  <link rel="alternate" hreflang="es" href="https://quiet-buddy.github.io/es/">
+  <link rel="alternate" hreflang="eu" href="https://quiet-buddy.github.io/eu/">
+  <link rel="alternate" hreflang="x-default" href="https://quiet-buddy.github.io/">
+  <link rel="canonical" href="https://quiet-buddy.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Quiet Buddy">
+  <meta property="og:title" content="Quiet Buddy">
+  <meta property="og:description" content="A friendly noise meter for the whole family. Choose your language.">
+  <meta property="og:url" content="https://quiet-buddy.github.io/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="eu_ES">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='50' cy='55' rx='40' ry='40' fill='%23FFC94D' stroke='%232B2B2B' stroke-width='4'/%3E%3Ccircle cx='36' cy='48' r='5' fill='%232B2B2B'/%3E%3Ccircle cx='64' cy='48' r='5' fill='%232B2B2B'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>
+    (function () {
+      var supported = ['en', 'es', 'eu'];
+      var target = null;
+      try {
+        var saved = localStorage.getItem('qb-lang');
+        if (saved && supported.indexOf(saved) !== -1) target = saved;
+      } catch (e) {}
+      if (!target) {
+        var list = (navigator.languages && navigator.languages.length)
+          ? navigator.languages
+          : [navigator.language || 'en'];
+        for (var i = 0; i < list.length; i++) {
+          var tag = String(list[i]).toLowerCase();
+          if (tag.indexOf('eu') === 0) { target = 'eu'; break; }
+          if (tag.indexOf('es') === 0) { target = 'es'; break; }
+        }
+      }
+      location.replace('./' + (target || 'en') + '/');
+    })();
+  </script>
+</head>
+<body>
+
+<main class="landing">
+  <div class="wrap">
+    <section class="landing-card" aria-labelledby="landing-title">
+      <svg class="landing-buddy" viewBox="0 0 200 200" role="img" aria-label="Buddy, the Quiet Buddy mascot">
+        <path d="M78 30 C 72 14, 80 8, 92 18" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+        <path d="M100 26 C 100 10, 108 6, 116 14" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="100" cy="108" rx="78" ry="80" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+        <ellipse cx="52" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+        <ellipse cx="148" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+        <path d="M58 96 Q 70 82 82 96" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+        <path d="M118 96 Q 130 82 142 96" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+        <path d="M68 126 Q 100 160 132 126 Z" fill="#5B2A2A" stroke="#2B2B2B" stroke-width="4" stroke-linejoin="round"/>
+        <ellipse cx="74" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+        <ellipse cx="126" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+      </svg>
+      <h1 id="landing-title">Quiet Buddy</h1>
+      <p class="landing-choose">Choose your language</p>
+      <nav aria-label="Choose your language">
+        <ul class="landing-links">
+          <li><a class="btn btn-primary btn-big" href="./en/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a class="btn btn-primary btn-big" href="./es/" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a class="btn btn-primary btn-big" href="./eu/" hreflang="eu" lang="eu" data-lang="eu">Euskara</a></li>
+        </ul>
+      </nav>
+    </section>
+  </div>
+</main>
+
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[data-lang]');
+    if (!link) return;
+    try {
+      localStorage.setItem('qb-lang', link.getAttribute('data-lang'));
+    } catch (e) {}
+  });
+</script>
+</body>
+</html>

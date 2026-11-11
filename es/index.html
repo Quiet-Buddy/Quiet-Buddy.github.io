@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiet Buddy: un medidor de ruido amable para la familia</title>
+  <meta name="description" content="Quiet Buddy es una app gratuita para Android que convierte tu teléfono en un medidor de ruido amable para el hogar familiar. Buddy muestra lo fuerte que está la habitación, y no se graba nada.">
+  <link rel="alternate" hreflang="en" href="https://quiet-buddy.github.io/en/">
+  <link rel="alternate" hreflang="es" href="https://quiet-buddy.github.io/es/">
+  <link rel="alternate" hreflang="eu" href="https://quiet-buddy.github.io/eu/">
+  <link rel="alternate" hreflang="x-default" href="https://quiet-buddy.github.io/">
+  <link rel="canonical" href="https://quiet-buddy.github.io/es/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Quiet Buddy">
+  <meta property="og:title" content="Quiet Buddy: un medidor de ruido amable para la familia">
+  <meta property="og:description" content="Una app gratuita para Android que convierte tu teléfono en un medidor de ruido amable para el hogar familiar. Buddy muestra lo fuerte que está la habitación.">
+  <meta property="og:url" content="https://quiet-buddy.github.io/es/">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="eu_ES">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='50' cy='55' rx='40' ry='40' fill='%23FFC94D' stroke='%232B2B2B' stroke-width='4'/%3E%3Ccircle cx='36' cy='48' r='5' fill='%232B2B2B'/%3E%3Ccircle cx='64' cy='48' r='5' fill='%232B2B2B'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800&amp;display=swap">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./index.html">
+      <svg viewBox="0 0 200 200" role="img" aria-label="Buddy, la mascota de Quiet Buddy">
+        <path d="M78 30 C 72 14, 80 8, 92 18" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+        <path d="M100 26 C 100 10, 108 6, 116 14" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="100" cy="108" rx="78" ry="80" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+        <ellipse cx="52" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+        <ellipse cx="148" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+        <path d="M58 96 Q 70 82 82 96" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+        <path d="M118 96 Q 130 82 142 96" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+        <path d="M68 126 Q 100 160 132 126 Z" fill="#5B2A2A" stroke="#2B2B2B" stroke-width="4" stroke-linejoin="round"/>
+        <ellipse cx="74" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+        <ellipse cx="126" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+      </svg>
+      <span>Quiet Buddy</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Principal">
+      <ul>
+        <li><a href="./index.html" aria-current="page">Inicio</a></li>
+        <li><a href="./privacy.html">Privacidad</a></li>
+        <li><a href="https://github.com/Quiet-Buddy/noise-meter">GitHub</a></li>
+      </ul>
+    </nav>
+
+    <nav class="lang" aria-label="Idioma">
+      <ul>
+        <li><a href="../en/index.html" hreflang="en" lang="en" data-lang="en">English</a></li>
+        <li><a href="./index.html" hreflang="es" lang="es" aria-current="page">Español</a></li>
+        <li><a href="../eu/index.html" hreflang="eu" lang="eu" data-lang="eu">Euskara</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Un medidor de ruido amable para toda la familia</h1>
+        <p class="lead">Quiet Buddy convierte tu teléfono Android en un medidor de ruido suave. Buddy muestra lo fuerte que está la habitación, y no se graba ni se envía nada a ningún sitio.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/Quiet-Buddy/noise-meter/releases/latest">Descargar la app</a>
+          <a class="btn btn-secondary" href="https://github.com/Quiet-Buddy/noise-meter">Ver el código fuente</a>
+        </div>
+      </div>
+      <svg class="buddy-hero" viewBox="0 0 200 200" role="img" aria-label="Buddy, la mascota de Quiet Buddy, sonriendo feliz">
+        <path d="M78 30 C 72 14, 80 8, 92 18" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+        <path d="M100 26 C 100 10, 108 6, 116 14" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="100" cy="108" rx="78" ry="80" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+        <ellipse cx="52" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+        <ellipse cx="148" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+        <path d="M58 96 Q 70 82 82 96" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+        <path d="M118 96 Q 130 82 142 96" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+        <path d="M68 126 Q 100 160 132 126 Z" fill="#5B2A2A" stroke="#2B2B2B" stroke-width="4" stroke-linejoin="round"/>
+        <ellipse cx="74" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+        <ellipse cx="126" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+      </svg>
+    </section>
+
+    <section aria-labelledby="moods-title">
+      <h2 id="moods-title">Buddy muestra lo fuerte que es el ruido</h2>
+      <p>Buddy cambia de humor según el volumen de la habitación. Esto es lo que significa cada humor con los límites por defecto.</p>
+      <ul class="mood-grid">
+
+        <li class="mood mood-happy">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Buddy contento">
+            <path d="M78 30 C 72 14, 80 8, 92 18" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+            <path d="M100 26 C 100 10, 108 6, 116 14" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="100" cy="108" rx="78" ry="80" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+            <ellipse cx="52" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+            <ellipse cx="148" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+            <path d="M58 96 Q 70 82 82 96" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+            <path d="M118 96 Q 130 82 142 96" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+            <path d="M68 126 Q 100 160 132 126 Z" fill="#5B2A2A" stroke="#2B2B2B" stroke-width="4" stroke-linejoin="round"/>
+            <ellipse cx="74" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+            <ellipse cx="126" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+          </svg>
+          <h3>Contento</h3>
+          <p class="band">Por debajo de 55 dB</p>
+          <p>La habitación está tranquila y acogedora.</p>
+        </li>
+
+        <li class="mood mood-fine">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Buddy bien, con una sonrisa pequeña">
+            <path d="M78 30 C 72 14, 80 8, 92 18" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+            <path d="M100 26 C 100 10, 108 6, 116 14" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="100" cy="108" rx="78" ry="80" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+            <ellipse cx="52" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+            <ellipse cx="148" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+            <circle cx="70" cy="98" r="6" fill="#2B2B2B"/>
+            <circle cx="130" cy="98" r="6" fill="#2B2B2B"/>
+            <path d="M82 130 Q 100 142 118 130" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+            <ellipse cx="74" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+            <ellipse cx="126" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+          </svg>
+          <h3>Bien</h3>
+          <p class="band">55 a 65 dB</p>
+          <p>Sonidos normales de casa.</p>
+        </li>
+
+        <li class="mood mood-worried">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Buddy preocupado, con la boca ondulada y las cejas levantadas">
+            <path d="M78 30 C 72 14, 80 8, 92 18" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+            <path d="M100 26 C 100 10, 108 6, 116 14" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="100" cy="108" rx="78" ry="80" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+            <ellipse cx="52" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+            <ellipse cx="148" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+            <circle cx="70" cy="98" r="6" fill="#2B2B2B"/>
+            <circle cx="130" cy="98" r="6" fill="#2B2B2B"/>
+            <path d="M54 78 L 82 86" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+            <path d="M146 78 L 118 86" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+            <path d="M70 136 Q 79 126 88 136 T 106 136 T 124 136" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <ellipse cx="74" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+            <ellipse cx="126" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+          </svg>
+          <h3>Preocupado</h3>
+          <p class="band">65 a 75 dB</p>
+          <p>Ya hay bastante movimiento aquí.</p>
+        </li>
+
+        <li class="mood mood-sad">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Buddy triste, con el ceño fruncido y una lágrima azul">
+            <path d="M78 30 C 72 14, 80 8, 92 18" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+            <path d="M100 26 C 100 10, 108 6, 116 14" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="100" cy="108" rx="78" ry="80" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+            <ellipse cx="52" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+            <ellipse cx="148" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+            <circle cx="70" cy="98" r="6" fill="#2B2B2B"/>
+            <circle cx="130" cy="98" r="6" fill="#2B2B2B"/>
+            <path d="M76 142 Q 100 122 124 142" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+            <path d="M142 104 Q 149 116 142 122 Q 135 116 142 104 Z" fill="#8FC8FF" stroke="#2B2B2B" stroke-width="2"/>
+            <ellipse cx="74" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+            <ellipse cx="126" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+          </svg>
+          <h3>Triste</h3>
+          <p class="band">75 a 85 dB</p>
+          <p>Eso es fuerte. Es hora de calmarse.</p>
+        </li>
+
+        <li class="mood mood-too-loud">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Buddy tapándose las orejas con las manos, entrecerrando los ojos">
+            <path d="M78 30 C 72 14, 80 8, 92 18" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+            <path d="M100 26 C 100 10, 108 6, 116 14" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="100" cy="108" rx="78" ry="80" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+            <ellipse cx="52" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+            <ellipse cx="148" cy="124" rx="13" ry="8" fill="#FF9AA2" opacity="0.8"/>
+            <path d="M58 100 L 82 100" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+            <path d="M118 100 L 142 100" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+            <path d="M84 132 Q 100 146 116 132 Z" fill="#5B2A2A" stroke="#2B2B2B" stroke-width="4" stroke-linejoin="round"/>
+            <ellipse cx="22" cy="104" rx="16" ry="20" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+            <ellipse cx="178" cy="104" rx="16" ry="20" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+            <ellipse cx="74" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+            <ellipse cx="126" cy="186" rx="18" ry="8" fill="#FFC94D" stroke="#2B2B2B" stroke-width="4"/>
+          </svg>
+          <h3>Tapándose los oídos</h3>
+          <p class="band">85 dB o más</p>
+          <p>Muy fuerte. Buddy necesita un descanso.</p>
+        </li>
+
+      </ul>
+    </section>
+
+    <section aria-labelledby="how-title">
+      <h2 id="how-title">Cómo funciona</h2>
+      <ol class="steps">
+        <li>
+          <h3>Instala la app</h3>
+          <p>Quiet Buddy es gratuita y funciona en Android 10 o superior. Descarga la última versión de prueba desde la página de versiones.</p>
+        </li>
+        <li>
+          <h3>Pon el teléfono en la habitación</h3>
+          <p>El teléfono solo escucha el volumen. Buddy espera unos 3 segundos antes de cambiar de humor, para que no parpadee.</p>
+        </li>
+        <li>
+          <h3>Elige lo que mejor encaje en tu casa</h3>
+          <p>Elige un ajuste predefinido, define las horas de silencio y revisa el historial para ver cómo sonó el día.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="families-title">
+      <h2 id="families-title">Hecho para familias</h2>
+      <div class="feature-grid">
+        <div class="card">
+          <ul class="feature-list">
+            <li><strong>Ajustes predefinidos:</strong> Hora tranquila, Día a día o Hora de jugar. Los padres eligen el que encaja con el momento.</li>
+            <li><strong>Horas de silencio:</strong> Durante las horas de silencio, Buddy es 10 dB más exigente, así que reacciona antes.</li>
+            <li><strong>Historial:</strong> Consulta el ruido hora a hora de los últimos 7 días.</li>
+            <li><strong>Reto del silencio:</strong> Un reto de 30 segundos que se juega dentro de la app.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Tu privacidad es lo primero</h2>
+      <div class="card">
+        <ul class="privacy-list">
+          <li>Quiet Buddy mide solo el nivel de volumen. Nunca graba audio.</li>
+          <li>No se guarda ningún audio, y nada sale del teléfono.</li>
+          <li>La app no tiene permiso de internet, ni cuenta, ni anuncios.</li>
+          <li>Puedes leer todos los detalles en la <a href="./privacy.html">página de privacidad</a>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="accuracy-title">
+      <h2 id="accuracy-title">Sobre la precisión</h2>
+      <p class="note">Los micrófonos de los teléfonos no son sonómetros certificados. Las lecturas son aproximadas y se pueden calibrar en Ajustes.</p>
+    </section>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; Quiet Buddy</p>
+    <ul class="footer-links">
+      <li><a href="./privacy.html">Privacidad</a></li>
+      <li><a href="https://github.com/Quiet-Buddy/noise-meter">GitHub</a></li>
+    </ul>
+    <ul class="footer-links" aria-label="Idioma">
+      <li><a href="../en/index.html" hreflang="en" lang="en" data-lang="en">English</a></li>
+      <li><a href="./index.html" hreflang="es" lang="es" aria-current="page">Español</a></li>
+      <li><a href="../eu/index.html" hreflang="eu" lang="eu" data-lang="eu">Euskara</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[data-lang]');
+    if (!link) return;
+    try {
+      localStorage.setItem('qb-lang', link.getAttribute('data-lang'));
+    } catch (e) {}
+  });
+</script>
+</body>
+</html>
