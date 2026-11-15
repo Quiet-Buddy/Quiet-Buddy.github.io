@@ -189,7 +189,8 @@ button:focus-visible {
 
 /* Sections */
 
-main > section {
+main > section,
+main > .wrap > section:not(.hero) {
   padding: 32px 0;
 }
 
@@ -338,10 +339,75 @@ main > section {
   margin: 0;
 }
 
+/* Characters */
+
+
+.char-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.char {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.char img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin: 0 auto 8px;
+}
+
+
+.char p:last-child {
+  margin: 0;
+}
+
+
+
+.feature-grid .card h3 {
+  margin-bottom: 4px;
+}
+
+.feature-grid .card p {
+  margin: 0;
+}
+
+.hero-note {
+  margin: 12px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.cta {
+  text-align: center;
+  background: var(--buddy);
+  border-radius: var(--radius);
+  padding: 40px 24px !important;
+  margin: 16px 0;
+}
+
+.cta p {
+  max-width: 560px;
+  margin: 0 auto 20px;
+}
+
 /* Two-column layout on wider screens */
 
 @media (min-width: 560px) {
   .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .char-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -381,6 +447,14 @@ main > section {
 
   .feature-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .char-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .feature-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

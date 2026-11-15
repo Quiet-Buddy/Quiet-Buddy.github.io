@@ -10,6 +10,7 @@ Plain HTML and one CSS file. No build step and no JavaScript framework.
 index.html          Language chooser (redirects to en/, es/ or eu/)
 404.html            Trilingual "Page not found" page
 assets/site.css     The only stylesheet
+assets/characters/  One SVG per character for the character gallery
 en/                 English pages (index.html, privacy.html)
 es/                 Spanish pages (same file names as en/)
 eu/                 Basque pages (same file names as en/)
@@ -17,7 +18,7 @@ eu/                 Basque pages (same file names as en/)
 .nojekyll           Tells GitHub Pages to serve the files as they are
 ```
 
-Buddy is drawn as inline SVG in each page. There are no image files.
+Buddy's mood faces are inline SVG in each page. The character gallery uses `assets/characters/*.svg`, which are still frames of each character's happy pose taken from the motion prototypes in the app repository (`docs/design/*-motion.html`).
 
 ## Preview locally
 
